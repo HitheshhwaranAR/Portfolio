@@ -1,0 +1,296 @@
+
+/* General Page Settings */
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7fc;
+    color: #243047;
+    line-height: 1.7;
+}
+
+/* Fixed Profile Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 290px;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 30px 24px;
+    background-color: #152238;
+    color: white;
+    text-align: center;
+}
+
+
+.profile-photo {
+    width: 180px;
+    height: 220px;
+    object-fit: cover;
+    border: 4px solid #6c9eff;
+    border-radius: 10px;
+    padding: 4px;
+    background-color: white;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+
+.sidebar h2 {
+    font-size: 22px;
+    margin: 8px 0;
+}
+
+.role {
+    color: #b9c9e6;
+    font-size: 14px;
+}
+
+.sidebar hr {
+    border: 0;
+    border-top: 1px solid #3b4c67;
+    margin: 22px 0;
+}
+
+.sidebar h3 {
+    font-size: 16px;
+}
+
+.sidebar p {
+    font-size: 14px;
+}
+
+.sidebar a {
+    color: #b9d2ff;
+    text-decoration: none;
+}
+
+/* Navigation */
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 25px;
+}
+
+.sidebar nav a {
+    display: block;
+    padding: 9px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar nav a:hover {
+    background-color: #31558c;
+    color: white;
+}
+
+.sidebar-footer {
+    margin-top: 25px;
+    color: #9fb1ce;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 290px;
+    padding: 30px 6%;
+    max-width: 1500px;
+}
+
+/* Home Header */
+.hero {
+    min-height: 390px;
+    padding: 65px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #e4edff;
+    border-radius: 18px;
+    margin-bottom: 30px;
+}
+
+.eyebrow {
+    color: #3468c0;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: clamp(28px, 4vw, 46px);
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+.hero h1 span {
+    color: #3468c0;
+}
+
+.hero h2 {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.hero > p:not(.eyebrow) {
+    max-width: 600px;
+}
+
+/* Buttons and Links */
+.button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 22px;
+    background-color: #3468c0;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+    background-color: #234987;
+    transform: translateY(-3px);
+}
+
+/* Content Sections */
+.section {
+    padding: 28px;
+    margin-bottom: 28px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 18px rgba(25, 45, 80, 0.06);
+    scroll-margin-top: 20px;
+}
+
+.section h2 {
+    margin-top: 0;
+    font-size: 27px;
+}
+
+.section h3 {
+    color: #203b68;
+}
+
+/* Cards and Grid Layouts */
+.card {
+    padding: 20px;
+    background-color: #f7f9fd;
+    border: 1px solid #e2e9f5;
+    border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(25, 45, 80, 0.10);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.skills-grid .card {
+    text-align: center;
+    font-weight: bold;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.project-card h3 {
+    margin-top: 0;
+}
+
+.tag {
+    color: #3468c0;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.note {
+    color: #68758a;
+    font-size: 13px;
+    margin-top: 18px;
+}
+
+/* Contact Links */
+.section a {
+    color: #245eb5;
+    overflow-wrap: anywhere;
+}
+
+.section a:hover {
+    color: #16386e;
+}
+
+/* Footer */
+footer {
+    padding: 20px 0;
+    text-align: center;
+    color: #68758a;
+    font-size: 13px;
+}
+
+/* Responsive Layout for Smaller Screens */
+@media (max-width: 1000px) {
+    .sidebar {
+        width: 240px;
+        padding: 24px 16px;
+    }
+
+    .main-content {
+        margin-left: 240px;
+        padding: 24px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        overflow: visible;
+    }
+
+    .sidebar nav {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 18px;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 35px 22px;
+    }
+
+    .section {
+        padding: 22px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
